@@ -24,6 +24,7 @@ resource "azurerm_monitor_private_link_scoped_service" "main" {
   linked_resource_id  = element(var.linked_resource_ids, count.index)
 }
 
+
 resource "azurerm_private_dns_zone" "main" {
   count               = var.enable_private_endpoint && var.diff_sub == false ? length(var.private_dns_zones_names) : 0
   name                = element(var.private_dns_zones_names, count.index)
