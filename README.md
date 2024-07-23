@@ -23,7 +23,7 @@ for creating AZURE resources, and you can customize the inputs as needed. Below 
 
 ```hcl
 module "ampls" {
-  source      = "git::https://github.com/opsstation/terraform-azure-monitor.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-azure-monitor.git?ref=v1.0.0"
   name        = "appgyt"
   environment = "test"
   label_order = ["name", "environment"]
@@ -46,7 +46,7 @@ module "ampls" {
 
 ```hcl
 module "ampls_diff_subs" {
-  source      = "git::https://github.com/opsstation/terraform-azure-monitor.git?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-azure-monitor.git?ref=v1.0.0"
   name        = "app-1"
   environment = "test-1"
   label_order = ["name", "environment"]
@@ -70,10 +70,10 @@ module "ampls_diff_subs" {
 This example demonstrates how to create various AZURE resources using the provided modules. Adjust the input values to suit your specific requirements.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-azure-virtual-machine/blob/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-azure-virtual-machine/blob/master/_example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/opsstation/terraform-azure-virtual-machine/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-azure-virtual-machine/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
@@ -98,7 +98,7 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-azure-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-azure-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -127,10 +127,10 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | `[]` | no |
 | <a name="input_linked_resource_ids"></a> [linked\_resource\_ids](#input\_linked\_resource\_ids) | (Required) The name of the Azure Monitor Private Link Scoped Service. Changing this forces a new resource to be created. | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
 | <a name="input_location"></a> [location](#input\_location) | Location where resource should be created. | `string` | `""` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation'. | `string` | `"hello@opsstation.com"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash'. | `string` | `"hello@yadavprakash.com"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_private_dns_zones_names"></a> [private\_dns\_zones\_names](#input\_private\_dns\_zones\_names) | The name of the private dns zones from which private dns will be created for AMPLS | `list(string)` | <pre>[<br>  ""<br>]</pre> | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/opsstation/terraform-azure-subnet.git"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/yadavprakash/terraform-azure-subnet.git"` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | A container that holds related resources for an Azure solution | `string` | `""` | no |
 | <a name="input_subnet_id"></a> [subnet\_id](#input\_subnet\_id) | (Required) The ID of the Subnet from which Private IP Addresses will be allocated for this Private Endpoint. Changing this forces a new resource to be created. | `string` | `""` | no |
 
